@@ -1,0 +1,79 @@
+:root{
+    --primary-color: rgba(13, 110, 139, 0.75); /* last value makes it transparent*/
+    --overlay-color:    rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    height: 100vh;
+    background-color: gray;
+}
+.dropdown{
+    height: 10vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.projects ul, .products ul{
+    position: absolute;
+    background-color: white;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0; 
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+.dropdown button{
+    background: none;
+    border: none;
+}
+.dropdown button, .home{
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+.dropdown button:hover, .home:hover{
+    background-color: lightslategray;
+}
+.projects button:focus + ul, 
+.products button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+}
+.products li:hover, 
+.projects li:hover{
+    background-color: mediumaquamarine;
+}
+.products li, 
+.projects li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    height: 13vh;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+
